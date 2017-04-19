@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="vievport" content="width=devise-width,user-scalable=no">
+	<title>Первая игра</title>
+</head>
+<body>
+    <script type="text/javascript" src="pointjs_0_1_1/point.js"></script>
+    <script type="text/javascript">
+    
+    var js = new PointJS('2d', 600, 400, {backgroundColor:"gray"});
+    var game = js.game;
+    var rect = js.game.newRectObject({
+        x: 100,
+        y: 150,
+        w: 100,
+        h: 40,
+        fillColor: 'red'
+    });
+    
+    game.newLoop('Mario', function() {
+        game.clear();
+        rect.turn(1);
+        rect.draw();
+    });
+    
+    game.setLoop('Mario');
+    game.start();
+    
+    
+    
+    </script>
+    
+    
+</body>
+</html>
